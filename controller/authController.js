@@ -18,7 +18,7 @@ const signup = async (req, res) => {
     const newUser = new User(req.body);
     await newUser.save();
 
-    res.status(200).json({ message: "User signup successful" });
+    res.status(200).json({ message: "User signup successfully" });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Internal server error" });
@@ -39,7 +39,7 @@ const login = async (req, res) => {
     const response = {
       token,
       name: user.username,
-      message: "Login successful",
+      message: "Login successfully",
     };
     res.status(200).json(response);
   } catch (error) {
